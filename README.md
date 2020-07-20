@@ -24,9 +24,3 @@ ElephantSQL - https://www.elephantsql.com/
 
 DBeaver - https://dbeaver.io/
 
-Model–View–Controller (MVC)
-
-Backend for Frontend (BFF)
-
-Micro Frontends
-
