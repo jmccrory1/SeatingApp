@@ -7,3 +7,7 @@ This effort uses 3 Agile teams of full stack app devs. Scrum Team 1 is responsib
 
 ## Architecture
 ![PoC Sprint 1a](https://media.github.ibm.com/user/203313/files/51b1f400-ca51-11ea-9627-fb244a5ba736)
+
+## UI Concept
+![PoC Concept A](https://media.github.ibm.com/user/203313/files/e7548000-ca5f-11ea-8a7f-461c5a078ac2)
+
