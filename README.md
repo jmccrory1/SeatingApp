@@ -19,3 +19,14 @@ This effort uses 3 Agile teams of full stack app devs. Scrum Team 1 is responsib
 ## UI Concept
 ![PoC Concept A](https://media.github.ibm.com/user/203313/files/e7548000-ca5f-11ea-8a7f-461c5a078ac2)
 
+## Links
+ElephantSQL - https://www.elephantsql.com/
+
+DBeaver - https://dbeaver.io/
+
+Model–View–Controller (MVC)
+
+Backend for Frontend (BFF)
+
+Micro Frontends
+
