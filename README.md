@@ -5,6 +5,9 @@ Throughout the year, IBM CIC Baton Rouge conducts career fairs where candidates 
 
 This effort uses 3 Agile teams of full stack app devs. Scrum Team 1 is responsible for the Candidates API and Team 2, the Breakout Rooms API. **You are on Scrum Team 3 which owns the Queue Manager API.**
 
+## User Story 
+ > As a queue cop, I want to utilize a system that will allow me to manage the flow of candidates between breakout rooms (queues) so that candidates are interviewed by professional teams knowledgeable in the skills for the candidate’s potential JRSS
+
 ## Architecture
 ![PoC Sprint 1a](https://media.github.ibm.com/user/203313/files/51b1f400-ca51-11ea-9627-fb244a5ba736)
 
