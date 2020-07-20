@@ -6,4 +6,4 @@ Throughout the year, IBM CIC Baton Rouge conducts career fairs where candidates 
 This effort used 3 Scrum team of full stack app devs. Team 1 is responsible for the Candidates API and Team 2, the Breakout Rooms API. **You are on Scrum Team 3 which owns the Queue Manager API.**
 
 ## Architecture
-![PoC Sprint 1](https://media.github.ibm.com/user/203313/files/b9ffd600-ca4f-11ea-9047-3a2ac87fb39f)
+![PoC Sprint 1a](https://media.github.ibm.com/user/203313/files/51b1f400-ca51-11ea-9627-fb244a5ba736)
