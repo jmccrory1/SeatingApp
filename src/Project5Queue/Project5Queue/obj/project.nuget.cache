@@ -1,0 +1,69 @@
+{
+  "version": 2,
+  "dgSpecHash": "G8PmZLedmnH44XA1xgglvxdoKdS1qW9L9xALOyNgyFTuBPKJg6SIK/k/kbrnP9CCIhFupwEZGU5bXnj8fdJaqA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\JuliaMccrory\\cic2020interns_wk5\\src\\Project5Queue\\Project5Queue\\Project5Queue.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\advancedstringbuilder\\0.1.0\\advancedstringbuilder.0.1.0.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\javascriptengineswitcher.core\\3.1.0\\javascriptengineswitcher.core.3.1.0.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\jspool\\4.0.0\\jspool.4.0.0.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\2.1.0\\microsoft.dotnet.platformabstractions.2.1.0.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\microsoft.extensions.dependencymodel\\2.1.0\\microsoft.extensions.dependencymodel.2.1.0.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\react.core\\5.2.6\\react.core.5.2.6.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\react.web\\5.2.6\\react.web.5.2.6.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\react.web.mvc4\\5.2.6\\react.web.mvc4.5.2.6.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\runtime.native.system\\4.0.0\\runtime.native.system.4.0.0.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\system.appcontext\\4.1.0\\system.appcontext.4.1.0.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\system.collections\\4.0.11\\system.collections.4.0.11.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\system.diagnostics.debug\\4.0.11\\system.diagnostics.debug.4.0.11.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\system.dynamic.runtime\\4.0.11\\system.dynamic.runtime.4.0.11.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\system.globalization\\4.0.11\\system.globalization.4.0.11.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\system.io\\4.1.0\\system.io.4.1.0.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\system.io.filesystem\\4.0.1\\system.io.filesystem.4.0.1.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\system.io.filesystem.primitives\\4.0.1\\system.io.filesystem.primitives.4.0.1.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\system.linq\\4.1.0\\system.linq.4.1.0.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\system.linq.expressions\\4.1.0\\system.linq.expressions.4.1.0.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\system.objectmodel\\4.0.12\\system.objectmodel.4.0.12.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\system.reflection\\4.1.0\\system.reflection.4.1.0.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\system.reflection.emit\\4.0.1\\system.reflection.emit.4.0.1.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.0.1\\system.reflection.emit.ilgeneration.4.0.1.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\system.reflection.emit.lightweight\\4.0.1\\system.reflection.emit.lightweight.4.0.1.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\system.reflection.extensions\\4.0.1\\system.reflection.extensions.4.0.1.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\system.reflection.primitives\\4.0.1\\system.reflection.primitives.4.0.1.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\system.reflection.typeextensions\\4.1.0\\system.reflection.typeextensions.4.1.0.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\system.resources.resourcemanager\\4.0.1\\system.resources.resourcemanager.4.0.1.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\system.runtime\\4.1.0\\system.runtime.4.1.0.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\system.runtime.extensions\\4.1.0\\system.runtime.extensions.4.1.0.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\system.runtime.handles\\4.0.1\\system.runtime.handles.4.0.1.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\system.runtime.interopservices\\4.1.0\\system.runtime.interopservices.4.1.0.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\system.runtime.interopservices.runtimeinformation\\4.0.0\\system.runtime.interopservices.runtimeinformation.4.0.0.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\system.text.encoding\\4.0.11\\system.text.encoding.4.0.11.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\system.threading\\4.0.11\\system.threading.4.0.11.nupkg.sha512",
+    "C:\\Users\\JuliaMccrory\\.nuget\\packages\\system.threading.tasks\\4.0.11\\system.threading.tasks.4.0.11.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'React.Web 5.2.6' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "React.Web",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'React.Web.Mvc4 5.2.6' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "React.Web.Mvc4",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
+}
