@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 app.use(express.json());
 
-// Define client
 const { Client } = require("pg");
 
 const client = new Client({
@@ -16,7 +15,6 @@ const client = new Client({
 client.connect();
 
 const port = process.env.PORT || 5000;
-// console.log that your server is up and running
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
 const candidate = JSON.stringify(
@@ -69,6 +67,34 @@ app.put("/assign", async (req, res) => {
 });
 
 app.delete("/assign", async (req, res) => {
+  try {
+    console.log("delete successful");
+    const values = await client.query(
+      "delete candidate_interviews_assignments Where name = $1",
+      [req.params.id]
+    );
+
+    res.json(values.rows);
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+app.get("/candidateinfo", async (req, res) => {
+  try {
+    console.log("delete successful");
+    const values = await client.query(
+      "delete candidate_interviews_assignments Where name = $1",
+      [req.params.id]
+    );
+
+    res.json(values.rows);
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+app.get("/breakoutroom", async (req, res) => {
   try {
     console.log("delete successful");
     const values = await client.query(
