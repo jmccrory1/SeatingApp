@@ -81,28 +81,29 @@ app.delete("/assign", async (req, res) => {
 });
 
 app.get("/candidateinfo", async (req, res) => {
-  try {
-    console.log("delete successful");
-    const values = await client.query(
-      "delete candidate_interviews_assignments Where name = $1",
-      [req.params.id]
-    );
+  const { create_w3id } = req.body;
 
-    res.json(values.rows);
+  try {
+    console.log("Get successful");
+    const addValues = await client.query(
+      "SELECT candidate_info FROM candidate_interviews_assignments"
+     
+    );
+    res.send(addValues.rows[0]);
   } catch (err) {
     console.log(err);
   }
 });
 
 app.get("/breakoutroom", async (req, res) => {
-  try {
-    console.log("delete successful");
-    const values = await client.query(
-      "delete candidate_interviews_assignments Where name = $1",
-      [req.params.id]
-    );
 
-    res.json(values.rows);
+  try {
+    console.log("Get successful");
+    const addValues = await client.query(
+      "SELECT breakout_room_info FROM candidate_interviews_assignments"
+     
+    );
+    res.send(addValues.rows[0]);
   } catch (err) {
     console.log(err);
   }
