@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 app.use(express.json());
+app.use(cors());
 
 const { Client } = require("pg");
 
@@ -22,10 +24,10 @@ app.listen(port, () => console.log(`Listening on port ${port}`));
 
 //Require .JSON files to get sample info
 const candidate = JSON.stringify(
-  require("../Artifacts/sample_candidate_info.json")
+  require("./Artifacts/sample_candidate_info.json")
 );
 const breakout_room = JSON.stringify(
-  require("../Artifacts/sample_collection_breakout_room_info.json")
+  require("./Artifacts/sample_collection_breakout_room_info.json")
 );
 
 //Post request to create a new w3Id
