@@ -1,0 +1,18 @@
+version: "3.7"
+services: 
+   cicintern2020:
+        image: cicintern2020
+        ports:
+            - 5000:5000
+        command: bash -c 'while !<dev/tcp/db/5432; do sleep 1; done; npm start'
+        depends_on:
+            - db
+        environment:
+            - DATABASE_URL = postgres://kkosyrgi:zrn-y1rBMUGZbBj9WgEbWMPjZrrhcG5a@ruby.db.elephantsql.com:5432/kkosyrgi
+            - PORT = 5000
+    db:
+        image: postgress
+        environment:
+            - POSTGRES_USER=kkosyrgi 
+            - POSTGRES_PASSWORD=zrn-y1rBMUGZbBj9WgEbWMPjZrrhcG5a
+            - POSTGRES_DB=kkosyrgi 

@@ -4,6 +4,10 @@ import CandidateStatus from "./candidateStatus";
 
 //import EditCandidate from "./EditCandidate";
 
+const breakout_room_info = JSON.stringify(
+  require("../Artifacts/sample_collection_breakout_room_info.json")
+);
+
 const EditQueue = () => {
   const [queue, setQueue] = useState([]);
 
@@ -43,7 +47,7 @@ const EditQueue = () => {
     <Fragment>
       <div className="container mt-5" />
 
-      <h3>Breakout Room 1</h3>
+      <h3>Breakout Room: {breakout_room_info.name}</h3>
 
       <h5>Number of Candidates: {queue.length}</h5>
 
