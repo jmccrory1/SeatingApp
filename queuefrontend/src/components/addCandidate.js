@@ -40,39 +40,27 @@ const AddCandidate = () => {
 
   return (
     <Fragment>
-      <div className="container">
-        <div className="dropdown">
-          <button
-            className="btn btn-secondary dropdown-toggle"
-            type="button"
-            id="dropdownMenuButton"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            Breakout Room
-          </button>
-
-          <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <div className="container text-center">
+        <div className="btn-group dropright">
+        <button type="button" className="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Select Breakout Room
+        </button>
+        <div className="dropdown-menu">
             {breakout_room.map((e) => (
-              <button className="dropdown-item" key={e} type="button">
+              <button className="dropdown-item" type="button" key={e}>
                 {e.name}
               </button>
             ))}
+             <form className="d-flex mt-3" onSubmit={onSubmitForm}></form>
           </div>
-        </div>
-
-        <form className="d-flex mt-3" onSubmit={onSubmitForm}>
-          <button type="button mt-5" className="btn btn-primary">
-            Add
-          </button>
-        </form>
-
+          </div>
+          </div>
         <p>
           {candidate.name}, {candidate.jrss}
         </p>
-      </div>
+    
     </Fragment>
+
   );
 };
 
