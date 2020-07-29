@@ -15,8 +15,7 @@ const AddCandidate = () => {
   const create_w3id = "john.smith@ibm.com";
   const interview_status_code = "P";
 
-  const onSubmitForm = async (e) => {
-    e.preventDefault();
+  const handleClick = async (e) => {
 
     try {
       const body = {
@@ -32,7 +31,6 @@ const AddCandidate = () => {
         body: JSON.stringify(body),
       });
 
-      window.location = "/";
     } catch (err) {
       console.error(err.message);
     }
@@ -40,27 +38,42 @@ const AddCandidate = () => {
 
   return (
     <Fragment>
-      <div className="container text-center">
-        <div className="btn-group dropright">
-        <button type="button" className="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Select Breakout Room
-        </button>
-        <div className="dropdown-menu">
-            {breakout_room.map((e) => (
-              <button className="dropdown-item" type="button" key={e}>
-                {e.name}
-              </button>
-            ))}
-             <form className="d-flex mt-3" onSubmit={onSubmitForm}></form>
-          </div>
-          </div>
-          </div>
-        <p>
-          {candidate.name}, {candidate.jrss}
-        </p>
-    
-    </Fragment>
+      <div className="container ">
+        <div className="card text-center">
+          <div className="card-header">Next To Be Placed:</div>
+          <div className="card-body">
+            <h5 className="card-title">{candidate.name}</h5>
+            <p className="card-text">{candidate.jrss}</p>
 
+            <div className="container text-center">
+              <div className="btn-group dropright">
+                <button
+                  type="button"
+                  className="btn btn-secondary dropdown-toggle"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Select Breakout Room
+                </button>
+                <div className="dropdown-menu">
+                  {breakout_room.map((e) => (
+                    <button
+                      className="dropdown-item"
+                      type="button"
+                      key={e.name}
+                      onClick={() => handleClick(e.name)}
+                    >
+                      {e.name}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Fragment>
   );
 };
 

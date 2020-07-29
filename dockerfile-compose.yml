@@ -1,18 +1,26 @@
 version: "3.7"
+
 services: 
-   cicintern2020:
-        image: cicintern2020
+   queuebackend:
+        image: 'node-webapp9'
         ports:
             - 5000:5000
-        command: bash -c 'while !<dev/tcp/db/5432; do sleep 1; done; npm start'
+        command: ["node", "index.js"]
         depends_on:
             - db
         environment:
             - DATABASE_URL = postgres://kkosyrgi:zrn-y1rBMUGZbBj9WgEbWMPjZrrhcG5a@ruby.db.elephantsql.com:5432/kkosyrgi
             - PORT = 5000
+    queuefrontend: 
+        image: 'react-webapp'
+        ports: 
+            - 5000:5000
+        command: ["npm", "start"]
     db:
-        image: postgress
+        image: 'postgress: latest'
         environment:
             - POSTGRES_USER=kkosyrgi 
             - POSTGRES_PASSWORD=zrn-y1rBMUGZbBj9WgEbWMPjZrrhcG5a
             - POSTGRES_DB=kkosyrgi 
+        ports:
+            - "5432:5432"

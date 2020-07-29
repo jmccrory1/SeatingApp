@@ -1,8 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
-
 import CandidateStatus from "./candidateStatus";
-
-//import EditCandidate from "./EditCandidate";
 
 const breakout_room_info = JSON.stringify(
   require("../Artifacts/sample_collection_breakout_room_info.json")
@@ -10,12 +7,9 @@ const breakout_room_info = JSON.stringify(
 
 const EditQueue = () => {
   const [queue, setQueue] = useState([]);
-
-  //Delete Candidate
-
   const deleteCandidate = async (id) => {
     try {
-      await fetch(`http://localhost:5000/assign/${id}`, {
+      await fetch(`http://localhost:5000/assign/:id`, {
         method: "DELETE",
       });
 
@@ -25,14 +19,10 @@ const EditQueue = () => {
     }
   };
 
-  //Get Table
-
   const getQueue = async () => {
     try {
       const response = await fetch("http://localhost:5000/assign");
-
       const responseBody = await response.json();
-
       setQueue(responseBody);
     } catch (error) {
       console.error(error.message);
@@ -46,59 +36,33 @@ const EditQueue = () => {
   return (
     <Fragment>
       <div className="container mt-5" />
-
-      <h3>Breakout Room: {breakout_room_info.name}</h3>
-
-      <h5>Number of Candidates: {queue.length}</h5>
-
+      <h4>{breakout_room_info.name}</h4>
+      <h5>Number of Candidates in Breakout Room: {queue.length}</h5>
       <table className="table">
         <thead>
           <tr>
-            <th scope="col">#</th>
-
             <th scope="col">Name</th>
-
             <th scopr="col">JRSS</th>
-
-            <th scope="col">Resume</th>
-
             <th scope="col">Status</th>
-
             <th scopr="col">Delete</th>
           </tr>
-        </thead>
+          </thead>
 
         <tbody>
           {queue.map((e) => (
             <tr key={e.id}>
               <th>{e.id}</th>
-
               <td>{e.candidate_info.name}</td>
-
               <td>{e.candidate_info.jrss}</td>
-
-              <td>
-                {e.candidate_info.links.map((link) => (
-                  <a
-                    href={link.url}
-                    className="btn btn-primary form-control mt-1"
-                    role="button"
-                  >
-                    {link.name}
-                  </a>
-                ))}
-              </td>
-
               <td>
                 <CandidateStatus e={e} />
               </td>
-
               <td>
                 <button
                   className="btn btn-danger btn-block"
                   onClick={() => deleteCandidate(e.id)}
                 >
-                  Delete
+                  X
                 </button>
               </td>
             </tr>
