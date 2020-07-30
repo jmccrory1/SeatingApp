@@ -40,7 +40,7 @@ app.post("/assign", async (req, res) => {
       "insert into candidate_interviews_assignments(candidate_info, breakout_room_info, create_w3id) values ($1, $2, $3)",
       [candidate, breakout_room, create_w3id]
     );
-    res.send(addValues.rows[0]);
+    res.send(addValues.rows);
   } catch (err) {
     console.log(err);
   }
@@ -53,7 +53,7 @@ app.get("/assign", async (req, res) => {
     const addValues = await client.query(
       "SELECT * from candidate_interviews_assignments"
     );
-    res.send(addValues.rows[0]);
+    res.send(addValues);
   } catch (err) {
     console.log(err);
   }
@@ -108,7 +108,7 @@ app.get("/breakoutroom", async (req, res) => {
     const addValues = await client.query(
       "SELECT breakout_room_info FROM candidate_interviews_assignments"
     );
-    res.send(addValues.rows[0]);
+    res.send(addValues.rows);
   } catch (err) {
     console.log(err);
   }

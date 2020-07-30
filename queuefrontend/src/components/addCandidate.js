@@ -12,25 +12,23 @@ const candidate = JSON.parse(candidate_info);
 const breakout_room = JSON.parse(breakout_room_info);
 
 const AddCandidate = () => {
-  const create_w3id = "john.smith@ibm.com";
-  const interview_status_code = "P";
+  const create_w3id = "julia.mccrory@ibm.com";
 
   const handleClick = async (e) => {
+    e.preventDefault();
 
     try {
       const body = {
         create_w3id,
-        interview_status_code,
         candidate_info,
         breakout_room_info,
       };
 
       await fetch("http://localhost:5000/assign", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+        method: "GET",
+        // headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       });
-
     } catch (err) {
       console.error(err.message);
     }
@@ -38,14 +36,14 @@ const AddCandidate = () => {
 
   return (
     <Fragment>
-      <div className="container ">
-        <div className="card text-center">
+      <div className="container">
+        <div className="card">
           <div className="card-header">Next To Be Placed:</div>
           <div className="card-body">
             <h5 className="card-title">{candidate.name}</h5>
             <p className="card-text">{candidate.jrss}</p>
 
-            <div className="container text-center">
+            <div className="container">
               <div className="btn-group dropright">
                 <button
                   type="button"
@@ -61,15 +59,25 @@ const AddCandidate = () => {
                     <button
                       className="dropdown-item"
                       type="button"
-                      key={e.name}
-                      onClick={() => handleClick(e.name)}
+                      key={e}
                     >
                       {e.name}
                     </button>
                   ))}
                 </div>
               </div>
+              
+              <div className="container">
+              <div className="vertical-center">
+              <form className="d-flex mt-3" onSubmit={handleClick}>
+                <button type="button mt-5" className="btn btn-primary">
+                  Add
+                </button>
+              </form>
+              </div>
+              </div>
             </div>
+
           </div>
         </div>
       </div>

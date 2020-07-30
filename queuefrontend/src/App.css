@@ -13,6 +13,8 @@ h1 {
 .btn{
     background-color: teal;
     border: white;
+    margin: 0 auto;
+
 }
 
 .card-header {
@@ -28,6 +30,7 @@ h1 {
 }
 
 .table {
-  background-color: rgb(51, 106, 224);
+  background-color: darkblue;
   color: white;
 }
+

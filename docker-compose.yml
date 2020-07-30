@@ -1,0 +1,26 @@
+version: "3"
+
+services: 
+    queuebackend:
+        build: ./queuebackend
+        ports:
+            - '5000:5000'
+        depends_on:
+            - DB
+        environment:
+            - DATABASE_URL=postgres://kkosyrgi:zrn-y1rBMUGZbBj9WgEbWMPjZrrhcG5a@ruby.db.elephantsql.com:5432/kkosyrgi
+   
+    queuefrontend: 
+        build: ./queuefrontend
+        ports: 
+            - 3000:3000
+        stdin_open: true
+
+    DB:
+        image: 'postgres'
+        environment:
+            - POSTGRES_USER=kkosyrgi 
+            - POSTGRES_PASSWORD=zrn-y1rBMUGZbBj9WgEbWMPjZrrhcG5a
+            - POSTGRES_DB=kkosyrgi 
+        ports:
+            - "5432:5432"
