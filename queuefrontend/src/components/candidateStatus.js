@@ -11,12 +11,11 @@ const candidate_info = JSON.stringify(
   const CandidateStatus = () => {
 
   const [status] = useState(interview_status_code);
-  const assignmentStatus = async (el, str) => {
+  const assignmentStatus = async () => {
     try {
       const body = { interview_status_code };
       await fetch(`http://localhost:5000/assign/:id`, {
         method: "PUT",
-        // headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       });
     } catch (error) {
@@ -26,7 +25,7 @@ const candidate_info = JSON.stringify(
 
   return (
     <Fragment>
-      <div className="dropdown" id={candidate.w3id}>
+      <div className="dropdown" id={candidate.id}>
         <button
           className="btn btn-secondary dropdown-toggle"
           type="button"
@@ -34,19 +33,19 @@ const candidate_info = JSON.stringify(
           data-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false"
-          value={status}
+          key={status}
         >
           {'Select'}
         </button>
         <div
           className="dropdown-menu"
           aria-labelledby="dropdownMenuButton"
-          id={candidate.w3id}
+          id={candidate.id}
         >
           <button
             className="dropdown-item"
             type="button"
-            onClick={el => assignmentStatus(el, "P")}
+            onClick={() => assignmentStatus("P")}
           >
             Pending
           </button>
@@ -54,7 +53,7 @@ const candidate_info = JSON.stringify(
           <button
             className="dropdown-item"
             type="button"
-            onClick={el => assignmentStatus(el, "I")}
+            onClick={() => assignmentStatus("I")}
           >
             Incomplete
           </button>
@@ -62,7 +61,7 @@ const candidate_info = JSON.stringify(
           <button
             className="dropdown-item"
             type="button"
-            onClick={el => assignmentStatus(el, "C")}
+            onClick={() => assignmentStatus("C")}
           >
             Complete
           </button>
@@ -70,7 +69,7 @@ const candidate_info = JSON.stringify(
           <button
             className="dropdown-item"
             type="button"
-            onClick={el => assignmentStatus(el, "D")}
+            onClick={() => assignmentStatus("D")}
           >
             Deferred
           </button>
@@ -78,7 +77,7 @@ const candidate_info = JSON.stringify(
           <button
             className="dropdown-item"
             type="button"
-            onClick={el => assignmentStatus(el, "R")}
+            onClick={()=> assignmentStatus("R")}
           >
             Reassigned
           </button>

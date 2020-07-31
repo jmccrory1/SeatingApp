@@ -5,9 +5,9 @@ const EditCandidate = ({ e }) => {
 
     const putModify = async(el) => {
         el.preventDefault();
-        var date = new Date();
+        
         try {
-            const body = { modify_w3id, date };
+            const body = { modify_w3id };
             await fetch(`http://localhost:5000/assign/:id`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json"},

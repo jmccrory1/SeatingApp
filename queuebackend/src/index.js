@@ -33,7 +33,8 @@ const breakout_room = JSON.stringify(
 //Post request to create a new w3Id
 //3 Columns in table for candidate info, breakout room info, and w3Id
 app.post("/assign", async (req, res) => {
-  const { create_w3id } = req.body;
+  const {candidate, breakout_room, create_w3id} = req.body;
+  console.log(req.body);
   try {
     console.log("connected successfully");
     const addValues = await client.query(

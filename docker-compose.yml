@@ -9,12 +9,14 @@ services:
             - DB
         environment:
             - DATABASE_URL=postgres://kkosyrgi:zrn-y1rBMUGZbBj9WgEbWMPjZrrhcG5a@ruby.db.elephantsql.com:5432/kkosyrgi
+        command: node index.js
    
     queuefrontend: 
         build: ./queuefrontend
         ports: 
             - 3000:3000
         stdin_open: true
+        command: npm start
 
     DB:
         image: 'postgres'
